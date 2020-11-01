@@ -1,12 +1,12 @@
 # Containerized web app (django)
 
-### To run:
+### to run
 `docker-compose up`
 
-### Url:
+### url
 http://127.0.0.1:8000/hello/
 
-### Add users:
+### add users
 http://127.0.0.1:8000/admin/
 
 ### superuser credentials
