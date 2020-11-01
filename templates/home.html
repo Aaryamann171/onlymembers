@@ -14,10 +14,10 @@
 
     #head2 {
         padding-top: 100px;
-        color: rebeccapurple;
+        color: blue;
     }
 
-    ul {
+    ol {
         font-size: 2em;
     }
 </style>
@@ -27,12 +27,12 @@
 
 <h1 id="head2">List of members of our prestigious club:</h1>
 
-<ul>
+<ol>
 
     {% for user in users %}
     <li class="user">{{ user }}</li>
     {% endfor %}
 
-</ul>
+</ol>
 
 {% endblock %}
