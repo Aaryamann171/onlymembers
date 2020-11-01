@@ -15,7 +15,7 @@ password: oreo171171
 
 ### dockerhub
 username: aaryamann171\
-https://hub.docker.com/r/aaryamann171/test\
+https://hub.docker.com/r/aaryamann171/test \
 `docker pull aaryamann171/test`
 
 ### database used
