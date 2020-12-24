@@ -1,36 +1,20 @@
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-<style>
-    body {
-        padding: 10%;
-    }
 
-    #head1 {
-
-        text-align: center;
-        font-weight: 100;
-        font-size: 8em;
-    }
-
-    #head2 {
-        padding-top: 100px;
-        color: blue;
-    }
-
-    ol {
-        font-size: 2em;
-    }
-</style>
-
-<h1 id="head1">Welcome to the Coder's Club</h1>
+{% extends "base.html" %}
 {% block content %}
-
+<h1 id="head1">Welcome to the Coder's Club</h1>
+<form action="/create">
+<button class="btn btn-dark">add new member</button>
+</form>
 <h1 id="head2">List of members of our prestigious club:</h1>
 
 <ol>
 
     {% for user in users %}
     <li class="user">{{ user }}</li>
+    {% endfor %}
+
+    {% for member in members %}
+    <li class="member">{{ member }}</li>
     {% endfor %}
 
 </ol>
