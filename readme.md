@@ -1,4 +1,4 @@
-# Containerized Web App
+# onlymembers - A Containerized Web App
 Assignment Submission for Capstone-II
 
 ### framework
