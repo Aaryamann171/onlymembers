@@ -7,5 +7,5 @@ from hello.views import member_create_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('hello.urls')),
-    path('create/',member_create_view)
+    path('create/', member_create_view)
 ]

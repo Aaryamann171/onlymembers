@@ -1,0 +1,49 @@
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: snow;
+}
+
+.container {
+  margin-top: 40px;
+}
+
+#head-1 {
+  font-weight: 100;
+  font-size: 5.5rem;
+  text-align: center;
+}
+
+#head-2 {
+  margin: 50px 0;
+  color: #81a1c1;
+}
+
+h3 {
+  color: #2e3440;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+#member-usernames {
+  font-size: 2em;
+}
+
+button {
+  color: #3b4252;
+  background-color: #88c0d0;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.375em 0.75em;
+}
+
+#my-nav {
+  background-color: #88c0d0;
+}
+
+#premium {
+  margin-bottom: 40px;
+}
+
+#member-lists li {
+  list-style-type: circle !important;
+}

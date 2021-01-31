@@ -1,23 +1,27 @@
-
 {% extends "base.html" %}
+
 {% block content %}
-<h1 id="head1">Welcome to the Coder's Club</h1>
+
+<h1 class="display-1" id="head-1">Welcome to the Coder's Club, <strong>{{ user }}</strong></h1>
 <form action="/create">
-<button class="btn btn-dark">add new member</button>
+    <button>add new member</button>
 </form>
-<h1 id="head2">List of members of our prestigious club:</h1>
-
-<ul>
-    <h3>Premium Members</h3>
-    {% for user in users %}
-    <li class="user">{{ user }}</li>
-    {% endfor %}
-
-    <h3>Members</h3>
-    {% for member in members %}
-    <li class="member">{{ member }}</li>
-    {% endfor %}
-
-</ul>
+<h1 id="head-2">List of members of our prestigious club:</h1>
+<div id="member-lists">
+    <ul id="member-usernames">
+        <div id='premium'>
+            <h3>Premium Members</h3>
+            {% for user in users %}
+            <li class="user">{{ user }}</li>
+            {% endfor %}
+        </div>
+        <div id="regular">
+            <h3>Members</h3>
+            {% for member in members %}
+            <li class="member">{{ member }}</li>
+            {% endfor %}
+        </div>
+    </ul>
+</div>
 
 {% endblock %}
