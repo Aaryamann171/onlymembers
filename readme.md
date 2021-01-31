@@ -18,21 +18,26 @@ sqlite3
 
 ### add members
 * click on add members button to create a new member
-* you will then be redirected to the home page where you can see the updated list
+<br> __OR__ <br>
+* add members from the admin panel
+you will then be redirected to the home page where you can see the updated list
 
 ### homepage url
 http://127.0.0.1:8000/
 
-### create member url
+### create regular members
 http://127.0.0.1:8000/create/
-\ __OR__ \
+<br> __OR__ <br>
 click on the `add new member` button
 
 ### superuser credentials
 username: oreo\
 password: oreo171171
 
-### add users
+### add users to premium list
+* `register` to be added to the list of premium member
+<br> __OR__ <br>
+Add users from the admin panel
 * http://127.0.0.1:8000/admin/
 * login using credentials
 * add user
