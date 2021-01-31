@@ -19,8 +19,8 @@ sqlite3
 ### add members
 * click on add members button to create a new member
 <br> __OR__ <br>
-* add members from the admin panel
-you will then be redirected to the home page where you can see the updated list
+* add members from the admin panel <br>
+#### you will then be redirected to the home page where you can see the updated list
 
 ### homepage url
 http://127.0.0.1:8000/
