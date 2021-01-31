@@ -7,16 +7,17 @@
 </form>
 <h1 id="head2">List of members of our prestigious club:</h1>
 
-<ol>
-
+<ul>
+    <h3>Premium Members</h3>
     {% for user in users %}
     <li class="user">{{ user }}</li>
     {% endfor %}
 
+    <h3>Members</h3>
     {% for member in members %}
     <li class="member">{{ member }}</li>
     {% endfor %}
 
-</ol>
+</ul>
 
 {% endblock %}

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from .models import Member
@@ -14,6 +14,7 @@ def member_create_view(request):
     form = MemberForm(request.POST or None)
     if form.is_valid():
         form.save()
+        return redirect('hello')
 
     context = {
         'form': form

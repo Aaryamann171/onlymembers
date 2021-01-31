@@ -6,6 +6,6 @@ from hello.views import member_create_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', include('hello.urls')),
+    path('', include('hello.urls')),
     path('create/',member_create_view)
 ]
