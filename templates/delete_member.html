@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+{% for member in members %}
+<table>
+    <tr>
+        <td>
+            <p>{{ member.username }}</p>
+        </td>
+        <td>
+            <form action="/delete/{{ member.id }}/">
+                <button type="submit">delete</button>
+            </form>
+        </td>
+    </tr>
+</table>
+{% endfor %}
+{% endblock %}

@@ -30,6 +30,22 @@ def member_create_view(request):
     return render(request, 'create_member.html', context)
 
 
+def member_delete_view(request):
+    members = Member.objects.all()
+    context = {'members': members}
+    return render(request, 'delete_member.html', context)
+
+
+def confirm_delete(request, id):
+    obj = Member.objects.filter(id=id)
+    if request.method == "POST":
+        obj.delete()
+        return redirect('home')
+    else:
+        context = {'obj':obj}
+        return render(request, 'confirm_delete.html', context)
+
+
 def register(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)

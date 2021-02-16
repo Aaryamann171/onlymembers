@@ -3,9 +3,20 @@
 {% block content %}
 
 <h1 class="display-1" id="head-1">Welcome to the Coder's Club, <strong>{{ user }}</strong></h1>
-<form action="/create">
-    <button>add new member</button>
-</form>
+<table>
+    <tr>
+        <td>
+            <form action="/create">
+                <button>add new member</button>
+            </form>
+        </td>
+        <td>
+            <form action="/delete_member">
+                <button id='yeet-btn'>delete existing member</button>
+            </form>
+        </td>
+    </tr>
+</table>
 <h1 id="head-2">List of members of our prestigious club:</h1>
 <div id="member-lists">
     <ul id="member-usernames">
