@@ -3,20 +3,24 @@
 {% block content %}
 
 <h1 class="display-1" id="head-1">Welcome to the Coder's Club, <strong>{{ user }}</strong></h1>
-<table>
-    <tr>
-        <td>
-            <form action="/create">
-                <button>add new member</button>
-            </form>
-        </td>
-        <td>
-            <form action="/delete_member">
-                <button id='yeet-btn'>delete existing member</button>
-            </form>
-        </td>
-    </tr>
-</table>
+<div class=row>
+    <div class="col s3">
+    <form action="/create">
+        <button id="create-btn"><i class="material-icons">add</i> add new member</button>
+    </form>
+    </div>
+    <div class="col s3">
+    <form action="/update_member">
+        <button id="update-btn"><i class= "material-icons">update</i> update member</span></button>
+    </form>
+    </div>
+    <div class="col s3">
+    <form action="/delete_member">
+        <button id="yeet-btn"><i class="material-icons">delete</i> delete member</button>
+    </form>
+    </div>
+</div>
+<hr>
 <h1 id="head-2">List of members of our prestigious club:</h1>
 <div id="member-lists">
     <ul id="member-usernames">

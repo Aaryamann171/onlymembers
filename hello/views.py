@@ -6,6 +6,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from .models import Member
 from .forms import MemberForm
+from django.views.generic import CreateView, UpdateView, DetailView
 
 
 def home_view(request):
@@ -14,27 +15,36 @@ def home_view(request):
     return render(request, 'home.html', {'users': users, 'members': members})
 
 
-def member_create_view(request):
-    form = MemberForm(request.POST)
-    if form.is_valid():
-        form.save()
-        username = form.cleaned_data.get('username')
-        messages.success(request, f'new member created: {username}')
-        return redirect('home')
-    else:
-        messages.error(request, "something went wrong, try again")
+class MemberCreateView(CreateView):
+    template_name = 'member_create.html'
+    form_class = MemberForm
+    queryset = Member.objects.all()
+    success_url = '/'
 
-    context = {
-        'form': form
-    }
-    return render(request, 'create_member.html', context)
+    def form_valid(self, form):
+        print(form.cleaned_data)
+        return super().form_valid(form)
 
+
+class MemberUpdateView(UpdateView):
+    template_name = 'member_create.html'
+    form_class = MemberForm
+    queryset = Member.objects.all()
+    success_url = '/'
+
+    def form_valid(self, form):
+        print(form.cleaned_data)
+        return super().form_valid(form)
+
+
+class MemberDetailView(DetailView):
+    template_name = 'member_details.html'
+    queryset = Member.objects.all()
 
 def member_delete_view(request):
     members = Member.objects.all()
     context = {'members': members}
     return render(request, 'delete_member.html', context)
-
 
 def confirm_delete(request, id):
     obj = Member.objects.filter(id=id)
@@ -45,6 +55,15 @@ def confirm_delete(request, id):
         context = {'obj':obj}
         return render(request, 'confirm_delete.html', context)
 
+def member_update_view(request):
+    members = Member.objects.all()
+    context = {'members': members}
+    return render(request, 'update_member.html', context)
+
+class MemberUpdate(UpdateView):
+    model = Member
+    fields = ['name']
+    queryset = Member.objects.all()
 
 def register(request):
     if request.method == 'POST':
